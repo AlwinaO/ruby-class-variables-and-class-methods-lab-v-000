@@ -21,11 +21,7 @@ class Song
     end
 
     def self.genre_count
-      frequencies = Hash.new(0)
-
-      @@genres.each {|genre| frequencies[genre] +=1}
-
-      frequencies.sort_by {|genre, amount| amount}
+      @@genres.group_by {|genre| genre +=1}
 
     end
 
