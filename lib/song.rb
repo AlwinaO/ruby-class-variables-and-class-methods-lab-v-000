@@ -25,7 +25,7 @@ class Song
 
       @@genres.each {|genre| frequencies[genre] +=1}
 
-      frequencies = frequencies.group_by {|genre, amount| amount}
+      frequencies = frequencies.sort_by {|genre, amount| amount}
 
     end
 
