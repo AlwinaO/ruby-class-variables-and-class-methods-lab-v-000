@@ -33,8 +33,6 @@ class Song
 
     def self.genre_count
       genre_count ={}
-
-
       @@genres.each do |genre|
 
         if genre_count[genre] != nil
@@ -45,10 +43,6 @@ class Song
         end
 
       end
-
-
-
-
       #frequencies = Hash.new { |hash, key| hash[key] =  }
       #@@genres.group_by {|genre| genre +=1}
 
