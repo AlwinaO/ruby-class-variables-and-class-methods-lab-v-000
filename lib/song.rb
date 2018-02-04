@@ -21,6 +21,15 @@ class Song
     end
 
     def self.genre_count
+      frequencies = Hash.new(0)
+
+      @@genres.each {|genre| genre +=1}
+
+      frequencies = @@genres.group_by {|genre, amount| amount}
+
+    end
+
+    def self.artist_count
 
 
     end
@@ -35,7 +44,4 @@ class Song
       @@genres << genre
 
     end
-
-
-
   end
